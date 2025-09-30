@@ -21,7 +21,7 @@ O objetivo foi consolidar os aprendizados das aulas, aplicando na prática a cri
 
 ---
 
-## 📂 Código JSON
+## 📘 Código JSON
 
 Para visualizar o código completo da máquina de estados veja o arquivo disponível em [`/state/hello-json`](./state/hello-json).
 
