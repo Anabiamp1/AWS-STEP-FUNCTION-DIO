@@ -1,0 +1,35 @@
+# 📘 Anotações e Reflexões – AWS Step Functions
+
+Este material reúne minhas observações e descobertas durante o desafio da DIO sobre Workflows Automatizados com AWS Step Functions.
+
+---
+
+## 🖥️ Primeiros Contatos
+
+Comecei utilizando o Free Tier da AWS, para garantir que os testes fossem feitos sem custos adicionais.
+A primeira State Machine foi criada a partir do exemplo Hello World oferecido pela AWS.
+A partir dela, realizei ajustes para entender na prática como funcionam os estados Task, Choice, Wait e também as estratégias de tratamento de falhas com Retry e Catch.
+
+---
+
+## ⚡ Principais Aprendizados
+
+- **Task** → Responsável por executar uma ação, geralmente chamar uma Lambda.
+- **Choice** → Permite definir caminhos diferentes dependendo do resultado.
+- **Wait** → Útil para pausar o fluxo antes de seguir para a próxima etapa.
+- **Catch / Retry** → Tornam o workflow mais resistente a falhas e instabilidades.
+
+---
+
+## ✨ Reflexões
+
+- Percebi como o Step Functions facilita a orquestração de serviços da AWS sem exigir muito código.
+- Gostei do fato de ser possível montar fluxos completos apenas com configuração declarativa.
+- Vi aplicações reais em processamento de pedidos, ETL, automação de dados e arquitetura de microsserviços.
+- Registrar tudo no GitHub foi importante para consolidar os estudos e gerar um material útil para consultas futuras.
+
+---
+
+
+✍️ **Autora:** Ana Beatriz  
+📌 *Desafio "Workflows Automatizados com AWS Step Functions" - DIO
