@@ -28,36 +28,7 @@ O código completo da máquina de estados está disponível em [`/state/hello-js
 Trecho ilustrativo:
 
 ```json
-{
-  "Comment": "Exemplo de Step Functions atualizado com Tasks, Choice e Wait.",
-  "StartAt": "Task",
-  "States": {
-    "Task": {
-      "Type": "Task",
-      "Resource": "arn:aws:states:::lambda:invoke",
-      "Parameters": {
-        "FunctionName": "arn:aws:lambda:us-east-1:123456789012:function:minha-funcao",
-        "Payload.$": "$"
-      },
-      "Retry": [
-        {
-          "ErrorEquals": [
-            "Lambda.ServiceException",
-            "Lambda.AWSLambdaException",
-            "Lambda.SdkClientException",
-            "Lambda.TooManyRequestsException"
-          ],
-          "IntervalSeconds": 1,
-          "MaxAttempts": 3,
-          "BackoffRate": 2
-        }
-      ],
-      "ResultSelector": {
-        "resultado.$": "$.Payload"
-      },
-      "ResultPath": "$.taskResult",
-      "Next": "VerificarResultado"
-    },
+
     "VerificarResultado": {
       "Type": "Choice",
       "Choices": [
@@ -81,58 +52,7 @@ Trecho ilustrativo:
         "FunctionName": "arn:aws:lambda:us-east-1:123456789012:function:tratar-erro-funcao",
         "Payload.$": "$"
       },
-      "Retry": [
-        {
-          "ErrorEquals": [
-            "Lambda.ServiceException",
-            "Lambda.AWSLambdaException",
-            "Lambda.SdkClientException",
-            "Lambda.TooManyRequestsException"
-          ],
-          "IntervalSeconds": 1,
-          "MaxAttempts": 3,
-          "BackoffRate": 2
-        }
-      ],
-      "ResultSelector": {
-        "resultado.$": "$.Payload"
-      },
-      "ResultPath": "$.taskResult",
-      "End": true
-    },
-    "TaskFinal": {
-      "Type": "Task",
-      "Resource": "arn:aws:states:::lambda:invoke",
-      "Parameters": {
-        "FunctionName": "arn:aws:lambda:us-east-1:123456789012:function:task-final-funcao",
-        "Payload.$": "$"
-      },
-      "Retry": [
-        {
-          "ErrorEquals": [
-            "Lambda.ServiceException",
-            "Lambda.AWSLambdaException",
-            "Lambda.SdkClientException",
-            "Lambda.TooManyRequestsException"
-          ],
-          "IntervalSeconds": 1,
-          "MaxAttempts": 3,
-          "BackoffRate": 2
-        }
-      ],
-      "ResultSelector": {
-        "resultado.$": "$.Payload"
-      },
-      "ResultPath": "$.taskResult",
-      "End": true
-    },
-    "Espera": {
-      "Type": "Wait",
-      "Seconds": 5,
-      "End": true
-    }
-  }
-}
+ 
 
 ```
 ##
