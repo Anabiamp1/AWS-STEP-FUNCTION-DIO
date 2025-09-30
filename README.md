@@ -23,7 +23,7 @@ O objetivo foi consolidar os aprendizados das aulas, aplicando na prática a cri
 
 ## 📂 Código JSON
 
-O código completo da máquina de estados está disponível em [`/state/hello-json`](./state/hello-json).
+Para visualizar o código completo da máquina de estados veja o arquivo disponível em [`/state/hello-json`](./state/hello-json).
 
 Trecho ilustrativo:
 
@@ -74,8 +74,8 @@ Integração do CloudWatch para logs e monitoramento.
 
 Boa prática: sempre estruturar o repositório com README, código e imagens organizados.
 
-👉 Para mais detalhes pessoais sobre meu aprendizado, consulte o arquivo completo:  
-[📘 insights.md](./docs/insights.md)
+👉 Para mais detalhes sobre meu aprendizado, consulte o arquivo:  
+[📘 meus-aprendizados](./aprendizados/meus-aprendizados)
 
 ##
 
