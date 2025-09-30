@@ -23,7 +23,7 @@ O objetivo foi consolidar os aprendizados das aulas, aplicando na prática a cri
 
 ## 📂 Código JSON
 
-O código completo da máquina de estados está disponível em [`/state-machine/hello-world.json`](./state-machine/hello-world.json).
+O código completo da máquina de estados está disponível em [`/state/hello-json`](./state/hello-json).
 
 Trecho ilustrativo:
 
